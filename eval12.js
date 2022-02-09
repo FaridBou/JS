@@ -34,29 +34,42 @@ function division(nombre1,nombre2) {
     resultat = nombre1/nombre2;
     return (resultat);
 }
-var nombre1;
-while (isNaN(nombre1)){
-    nombre1=prompt("entre le premier nombre");
-}
-nombre1=parseInt(nombre1);
+function replay() {
+    var nombre1;
+    while (isNaN(nombre1)) {
+        nombre1 = prompt("entre le premier nombre");
+    }
+    var nombre2;
+    while (isNaN(nombre2)) {
+        nombre2 = prompt("entre le second nombre");
+    }
 
-var nombre2;
-while (isNaN(nombre2)){
-    nombre2=prompt("entre le second nombre");
-}
-nombre2=parseInt(nombre2);
+    nombre1 = parseInt(nombre1);
+    nombre2 = parseInt(nombre2);
 
-var calcul=prompt("choisi un operateur:\n addition\n soustraction\n multiplication\n division ");
-switch (calcul) {
-    case "addition": alert("resultat = "+ addition(nombre1,nombre2));
-        break;
-    case "soustraction": alert("resultat = "+ soustraction(nombre1,nombre2));
-        break;
-    case "multiplication": alert("resultat = "+ multiplication(nombre1,nombre2));
-        break;
-    case "division": alert("resultat = "+ division(nombre1,nombre2));
-        break;
-    default:
-        alert("Faux, nul comme le PSG");
-        break;
+    var calcul = prompt("choisi un operateur:\n addition\n soustraction\n multiplication\n division ");
+    switch (calcul) {
+        case "addition":
+            alert("resultat = " + addition(nombre1, nombre2));
+            break;
+        case "soustraction":
+            alert("resultat = " + soustraction(nombre1, nombre2));
+            break;
+        case "multiplication":
+            alert("resultat = " + multiplication(nombre1, nombre2));
+            break;
+        case "division":
+            alert("resultat = " + division(nombre1, nombre2));
+            break;
+        default:
+            alert("Faux, nul comme le PSG");
+            break;
+    }
 }
+function again() {
+    do{
+        replay();
+    }
+    while(confirm("Veux tu rejouer ?"));
+}
+again();
