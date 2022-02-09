@@ -14,26 +14,49 @@
 
 alert("Bienvenue dans le supercalculator");
 
-var nombre1,nombre2,resultat,operateur;
+function addition(nombre1,nombre2) {
+    let resultat;
+    resultat = nombre1+nombre2;
+    return (resultat);
+}
+function soustraction(nombre1,nombre2) {
+    let resultat;
+    resultat = nombre1-nombre2;
+    return (resultat);
+}
+function multiplication(nombre1,nombre2) {
+    let resultat;
+    resultat = nombre1*nombre2;
+    return (resultat);
+}
+function division(nombre1,nombre2) {
+    let resultat;
+    resultat = nombre1/nombre2;
+    return (resultat);
+}
+var nombre1;
+while (isNaN(nombre1)){
+    nombre1=prompt("entre le premier nombre");
+}
+nombre1=parseInt(nombre1);
 
-var nombre1=prompt("entre le premier nombre");
-var nombre2=prompt("entre le second nombre");
-var operateur=prompt("entre un operateur");
+var nombre2;
+while (isNaN(nombre2)){
+    nombre2=prompt("entre le second nombre");
+}
+nombre2=parseInt(nombre2);
 
-function add(nombre1,nombre2) {
-    resultat=Number(nombre1)+Number(nombre2);
-    return(resultat);
+var calcul=prompt("choisi un operateur:\n addition\n soustraction\n multiplication\n division ");
+switch (calcul) {
+    case "addition": alert("resultat = "+ addition(nombre1,nombre2));
+        break;
+    case "soustraction": alert("resultat = "+ soustraction(nombre1,nombre2));
+        break;
+    case "multiplication": alert("resultat = "+ multiplication(nombre1,nombre2));
+        break;
+    case "division": alert("resultat = "+ division(nombre1,nombre2));
+        break;
+    default:
+        alert("Faux, nul comme le PSG");
+        break;
 }
-function div(nombre1,nombre2) {
-    resultat=Number(nombre1)/Number(nombre2);
-    return(resultat);
-}
-function mult(nombre1,nombre2) {
-    resultat=Number(nombre1)*Number(nombre2);
-    return(resultat);
-}
-function sous(nombre1,nombre2) {
-    resultat=Number(nombre1)-Number(nombre2);
-    return(resultat);
-}
-prompt(resultat);
