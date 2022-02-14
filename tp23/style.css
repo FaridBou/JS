@@ -1,0 +1,37 @@
+body{
+    background: linear-gradient(0.25turn, #303282, #d5d07d);
+}
+
+.container {
+    margin-top: 50px;
+    font-family: Satisfy, cursive;
+    text-align: center;
+}
+
+blockquote{
+    width: 50%;
+    padding: 100px;
+    height: 200px;
+    font-family: Satisfy, cursive;
+    font-size: 28px;
+    background-color: white;
+    border: 5px dashed #303282;
+    color: #303282;
+    text-shadow: #d5d07d 2px 2px 2px;
+    margin-left: 200px;
+}
+
+.quote {
+    height: auto;
+}
+
+.btn {
+    width: 30%;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #303282;
+    color: #CACF7D;
+    font-family: Satisfy, cursive;
+    font-size: x-large;
+}
