@@ -23,16 +23,18 @@ function verification(){
         //Tu n'a pas fait la gestion des erreur     
     if(inputUser < 0 || inputUser > 1000 || isNaN(inputUser) || inputUser === ""){ //si plus petit que 0 ou plus grand que 1000 ou pas un nombre ou vide
         affichage.textContent = "Saisis incorrecte !";  //Affiche une erreur
-        }else{                                          //sinon continue le code
+        }else{       
+            compteur++;                                //sinon continue le code et on incremente le compteur 
             if(inputUser < randNumb){
                 affichage.textContent = "C'est plus !";
             }else if (inputUser > randNumb) {
                 affichage.textContent = "C'est moins";
             }else {
                 affichage.textContent = "Bravo c'est gagné";
+                
             }
         }
     
     inputUserSelector.focus();
-    compteur++;
+    
 }
